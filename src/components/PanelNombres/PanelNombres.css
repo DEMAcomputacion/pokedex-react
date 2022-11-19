@@ -1,0 +1,10 @@
+.contenedor-panel-nombres {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #110439;
+    color: #DCF68C;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+}

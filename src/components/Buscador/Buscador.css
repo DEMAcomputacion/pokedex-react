@@ -1,0 +1,36 @@
+.contenedor {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    background-color: #2C2C2C;
+    color: #DCF68C;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-query-busqueda {
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #718c20;
+    background-color: transparent;
+    color: #DCF68C;
+    font-size: 1.5rem;
+    padding: 7px;
+}
+
+.input-query-busqueda:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #718c20;
+}
+
+.button-query-busqueda {
+    border: 1px solid #718c20;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: #DCF68C;
+    padding: 8px;
+}
