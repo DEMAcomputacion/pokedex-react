@@ -17,14 +17,14 @@ const fetchReducer = (state, action) => {
   }
 };
 
-export function useFetchListado(fetchResource, offset, limit) {
+export function useFetchListado(fetchResource, limit, offset) {
   const [state, dispatch] = useReducer(fetchReducer, initialState);
 
   useEffect(() => {
     const fetch = async () => {
       dispatch({ type: "CARGANDO" });
       try {
-        const response = await fetchResource(offset, limit);
+        const response = await fetchResource(limit, offset);
         dispatch({ type: "EXITO", payload: response });
       } catch (error) { 
         dispatch({ type: "FALLO", payload: error });

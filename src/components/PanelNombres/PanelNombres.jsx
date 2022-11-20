@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
 import llamarListadoPokemones from "../../api/llamarListadoPokemones.js";
 import { useFetchListado } from "../../hooks/useFetchListado.jsx";
-import Loading from "../Loading/Loading.jsx";
+//import Loading from "../Loading/Loading.jsx";
 import "./PanelNombres.css";
 
-function PanelNombres(offset = 40, limit = 40) {
-  const {data, error, loading} = useFetchListado(llamarListadoPokemones, offset, limit);
+function PanelNombres(limit = 40, offset = 0) {
+  const { data, error, loading } = useFetchListado(llamarListadoPokemones, 40, 0);
 
 
-  if (loading) return <Loading />;
+  //if (loading) return <Loading />;
   if (error) return "Something went wrong";
   if (data)
     return (
-      <>
-      <h1>data</h1>
-      </>
+      <div className="container">
+        {data.results.map((elem) => (
+          <div key={elem.name}>{elem.name}</div>
+        ))}
+        {console.log(data.results)}
+      </div>
     );
 
   return null;
