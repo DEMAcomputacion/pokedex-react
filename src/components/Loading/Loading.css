@@ -1,0 +1,17 @@
+.contenedor {
+  width: 5em;
+  height: 5em;
+  border: 2em solid #2db1b9;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: 1s linear infinite contenedor-spin;
+};
+
+@keyframes contenedor-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}

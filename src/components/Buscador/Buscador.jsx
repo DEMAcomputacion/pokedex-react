@@ -1,31 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import './Buscador.css'
 
 function Buscador() {
+    const [toSearch, setToSearch] = useState("")
+    //const [data, error, loading] = useFetchOnChange(onChangeInputSearch)
 
-    const queryBusqueda = () => {
-
+    const onChangeInputSearch = (e) => {
+        setToSearch(e.target.value)
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
-    }
     return (
         <div className="contenedor">
-            <form onSubmit={() => handleSubmit}>
                 <input
                     className="input-query-busqueda"
                     type="text"
                     placeholder="Escriba para buscar..."
-                    onKeyDown={() => queryBusqueda}
+                    onChange={onChangeInputSearch}
+                    value={toSearch}
                 />
-                <input
-                    className="button-query-busqueda"
-                    type="button"
-                    value="Buscar"
-                />
-            </form>
         </div>
     )
 }
