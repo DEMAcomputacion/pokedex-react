@@ -1,13 +1,25 @@
 .header-class {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
-    height: 56px;
-    background-color: #1F2D3D;
+    height: 10vh;
+    min-height: 75px;
+    background-image: linear-gradient(
+  90deg,
+  hsl(212deg 33% 18%) 0%,
+  hsl(194deg 64% 20%) 14%,
+  hsl(181deg 80% 20%) 31%,
+  hsl(156deg 38% 32%) 51%,
+  hsl(131deg 22% 28%) 72%,
+  hsl(97deg 20% 20%) 88%,
+  hsl(71deg 16% 13%) 100%
+);
+    
     color: #f5f7f9;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #666;
 }
 
 .header-text {

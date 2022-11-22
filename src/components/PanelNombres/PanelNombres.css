@@ -1,6 +1,45 @@
 .container {
-display: flex;
-flex-wrap: wrap;
-gap: 20px;
+    max-height: 90vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
 
+.name-card {
+    padding-left: 10px;
+    display:flex;
+    align-items: center;
+    height: 45px;
+    border-bottom: 1px solid #3F5D6D;
+    background-color: #1F2D3D;
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.name-card:hover {
+    background-color: #109D59;
+    color: #2c2a29;
+}
+
+.pokemon-number {
+    margin-right: 16px;
+    font-weight: bold;
+    font-size: .8rem;
+    min-width: 25px; 
+    height: 25px;
+    margin-left: 10px;
+    padding: 5px;
+    background-image: linear-gradient(
+        90deg,
+        hsl(156deg 38% 32%) 0%,
+        hsl(160deg 42% 28%) 17%,
+        hsl(164deg 47% 25%) 39%,
+        hsl(167deg 52% 21%) 64%,
+        hsl(170deg 57% 18%) 85%,
+        hsl(173deg 62% 15%) 100%
+      );
+    color:#f5f7f9;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
 }

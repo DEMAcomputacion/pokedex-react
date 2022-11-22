@@ -1,0 +1,15 @@
+.panel-doble {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  height: 90vh;
+}
+
+.panel-izquierdo {
+  flex: 80%;
+}
+
+.panel-derecho {
+  flex: 20%;
+}
