@@ -1,4 +1,4 @@
-import React, {useEffect, useState}from "react";
+import React, {useState}from "react";
 import llamarListadoPokemones from "../../api/llamarListadoPokemones.js";
 import {useFetchListado} from "../../hooks/useFetch.jsx";
 import Loading from "../Loading/Loading.jsx";

@@ -1,7 +1,6 @@
 .popup-container {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.6);
-    top: -130px;
     bottom: 0;
     left: 0;
     right: 0;

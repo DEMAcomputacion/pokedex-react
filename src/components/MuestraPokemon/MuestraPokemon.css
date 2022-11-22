@@ -2,6 +2,7 @@
   border: 0;
   margin: 0;
 }
+
 .pokemon-card-container {
   background: linear-gradient(to right, #4f5e4f, #363f42);
   width: 350px;
@@ -14,13 +15,11 @@
 
 .background {
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    20deg,
-    rgba(0, 0, 0, 1) 10%,
-    rgba(21, 88, 80, 1) 43%,
-    rgba(85, 135, 87, 1) 68%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: linear-gradient(20deg,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(21, 88, 80, 1) 43%,
+      rgba(85, 135, 87, 1) 68%,
+      rgba(0, 0, 0, 1) 100%);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   text-align: center;
@@ -71,21 +70,23 @@
 }
 
 .stats-height {
-    background-color: transparent;
-    color: #237B60;
-    border: 1px solid #237B60;
-    border-radius: 10px;
-    font-size: .8rem;
-    padding: 5px;
-    margin: 5px;
+  background-color: transparent;
+  color: #237B60;
+  border: 2px solid #237B60;
+  border-radius: 10px;
+  font-size: .8rem;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
 }
 
 .stats-weight {
-    background-color: transparent;
-    color: #8D4BB0;
-    border: 1px solid #8D4BB0;
-    border-radius: 10px;
-    font-size: .8rem;
-    padding: 5px;
-    margin: 5px;
+  background-color: transparent;
+  color: #8D4BB0;
+  border: 2px solid #8D4BB0;
+  border-radius: 10px;
+  font-size: .8rem;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
 }

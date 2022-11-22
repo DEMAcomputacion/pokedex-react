@@ -10,7 +10,6 @@ function ModalPokemon(props) {
         <div className="popup">
           <MuestraPokemon id={props.id}/>
         </div>
-        {props.children}
       </div>
     </div>
     </>
