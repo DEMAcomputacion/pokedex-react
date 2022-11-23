@@ -15,7 +15,7 @@ function MuestraPokemon(props) {
         <div className="pokemon-card">
           <div className="background">
             <img
-              src={data.sprites.other["official-artwork"].front_default}
+              src={data.sprites.other.home.front_default}
               alt="Pokemon"
               className="pokemon-image"
             />

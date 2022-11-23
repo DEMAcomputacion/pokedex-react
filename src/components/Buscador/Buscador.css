@@ -59,5 +59,6 @@ hr {
 .search-item {
     border: 1px solid #718c20;
     padding: 12px;
+    border-radius: 4px;
     background-color: #2f2f2f;
 }
