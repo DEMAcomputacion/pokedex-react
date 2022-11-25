@@ -3,6 +3,8 @@ import llamarListadoPokemones from "../../api/llamarListadoPokemones.js";
 import {useFetchListado} from "../../hooks/useFetch.jsx";
 import Loading from "../Loading/Loading.jsx";
 import ModalPokemon from "../Modals/Modal.jsx";
+import urlToId from "../../commons/urlToId.js";
+import capitalize from "../../commons/capitalize.js";
 import "./PanelNombres.css";
 
 function PanelNombres(props) {
@@ -23,8 +25,8 @@ function PanelNombres(props) {
       <div className="container">
         {data.results.map((elem, index) => (
           <div className="name-card" id={index+1} key={elem.name} onClick={mostrarModal}>
-            <span className="pokemon-number">{(elem.url.slice(34)).slice(0, -1)}</span>
-            {elem.name.toUpperCase()}
+            <span className="pokemon-number">{urlToId(elem.url)}</span>
+            {capitalize(elem.name)}
           </div>
         ))}
         <ModalPokemon trigger={modalVisibility} setTrigger={setModalVisibility} id={nroPokemon}/>

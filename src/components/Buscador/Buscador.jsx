@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import llamarListadoPokemones from "../../api/llamarListadoPokemones";
+import urlToId from "../../commons/urlToId.js";
 import {useFetchListado} from "../../hooks/useFetch";
 import useSearch from "../../hooks/useSearch";
 import ModalPokemon from "../Modals/Modal";
+import capitalize from "../../commons/capitalize.js";
 import "./Buscador.css";
 import Pokeball from './pokeball.png'
 
@@ -25,7 +27,7 @@ function Buscador(props) {
   };
 
   const mostrarModal = (e) => {
-    const nro = (e.target.id.slice(34)).slice(0, -1)
+    const nro = urlToId(e.target.id)
     setNroPokemon(nro)
     setModalVisibility(true)
   }
@@ -50,7 +52,7 @@ function Buscador(props) {
             key={elem.name} 
             onClick={mostrarModal}
             id={elem.url}
-            >{elem.name.toUpperCase()}</div>
+            >{capitalize(elem.name)}</div>
         ))}
       </div>
     </div>

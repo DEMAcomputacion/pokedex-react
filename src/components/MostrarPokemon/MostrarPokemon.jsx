@@ -2,24 +2,26 @@ import React from "react";
 import { useFetchPokemon } from "../../hooks/useFetch";
 import buscarPokemon from "../../api/buscarPokemon.js";
 import Loading from "../Loading/Loading";
-import "./MuestraPokemon.css";
+import capitalize from "../../commons/capitalize.js";
+import FallbackImage from '../../commons/pokeball-fallback.png'
+import "./MostrarPokemon.css";
 
-function MuestraPokemon(props) {
+function MostrarPokemon(props) {
   const { data, error, loading } = useFetchPokemon(buscarPokemon, props.id);
 
   if (loading) return <Loading />;
-  if (error) return "Something went wrong";
+  if (error) return "Algo salió mal";
   if (data)
     return (
       <div className="pokemon-card-container">
         <div className="pokemon-card">
           <div className="background">
             <img
-              src={data.sprites.other.home.front_default}
+              src={data.sprites.other.home.front_default || FallbackImage}
               alt="Pokemon"
               className="pokemon-image"
             />
-            <h1 className="pokemon-name">{data.name.toUpperCase()}</h1>
+            <h1 className="pokemon-name">{capitalize(data.name)}</h1>
             <div className="pokemon-stats">
               <span className="stats-height">Height: {data.height}</span>
               <span className="stats-weight">Weight: {data.weight}</span>
@@ -42,4 +44,4 @@ function MuestraPokemon(props) {
   return null;
 }
 
-export default MuestraPokemon;
+export default MostrarPokemon;

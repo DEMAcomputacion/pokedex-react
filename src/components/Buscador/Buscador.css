@@ -57,8 +57,10 @@ hr {
 }
 
 .search-item {
+    cursor: pointer;
     border: 1px solid #718c20;
     padding: 12px;
     border-radius: 4px;
     background-color: #2f2f2f;
+    letter-spacing: 2px;
 }

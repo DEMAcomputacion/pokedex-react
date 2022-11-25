@@ -1,5 +1,5 @@
 import React from "react";
-import MuestraPokemon from "../MuestraPokemon/MuestraPokemon";
+import MostrarPokemon from "../MostrarPokemon/MostrarPokemon";
 import "./Modal.css";
 
 function ModalPokemon(props) {
@@ -8,7 +8,7 @@ function ModalPokemon(props) {
     <div className="popup-background" onClick={() => props.setTrigger(false)}>
       <div className="popup-container"  style={{ display: "flex" }}>
         <div className="popup">
-          <MuestraPokemon id={props.id}/>
+          <MostrarPokemon id={props.id}/>
         </div>
       </div>
     </div>

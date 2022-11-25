@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function useSearch(datos, toSearch) {
 const [filteredData, setFilteredData] = useState([])
