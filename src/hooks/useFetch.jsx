@@ -57,7 +57,6 @@ export function useFetchPokemon(fetchResource, param) {
       dispatch({ type: "CARGANDO" });
       try {
         const response = await fetchResource(param);
-        console.log(response)
         localStorage.setItem(`Pokemon${param}`, JSON.stringify(response))
         dispatch({ type: "EXITO", payload: response });
       } catch (error) {

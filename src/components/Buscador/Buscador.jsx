@@ -4,9 +4,8 @@ import urlToId from "../../commons/urlToId.js";
 import {useFetchListado} from "../../hooks/useFetch";
 import useSearch from "../../hooks/useSearch";
 import ModalPokemon from "../Modals/Modal";
-import capitalize from "../../commons/capitalize.js";
-import "./Buscador.css";
-import Pokeball from './pokeball.png'
+import Resultados from "./Resultados";
+import "./index.css";
 
 function Buscador(props) {
   const [toSearch, setToSearch] = useState("");
@@ -17,7 +16,7 @@ function Buscador(props) {
   const [modalVisibility, setModalVisibility] = useState(false)
 
   useEffect(() => {
-    if (data) {
+    if (Boolean(data)) {
       setDatos(data);
     }
   }, [data]);
@@ -27,15 +26,15 @@ function Buscador(props) {
   };
 
   const mostrarModal = (e) => {
-    const nro = urlToId(e.target.id)
-    setNroPokemon(nro)
+    const idPokemon = urlToId(e.target.id)
+    console.log(e.target)
+    setNroPokemon(idPokemon)
     setModalVisibility(true)
   }
 
   return (
     <>
     <div className="contenedor">
-       <img src={Pokeball} alt="Pokeball" className="pokeball" />
       <input
         className="input-query-busqueda"
         type="text"
@@ -44,17 +43,7 @@ function Buscador(props) {
         value={toSearch}
       />
       <hr />
-        {filteredData.length !== 0 && "Resultados:"}
-      <div className="search-results">
-        {filteredData.map((elem) => (
-          <div 
-            className="search-item" 
-            key={elem.name} 
-            onClick={mostrarModal}
-            id={elem.url}
-            >{capitalize(elem.name)}</div>
-        ))}
-      </div>
+      <Resultados filteredData={filteredData} mostrarModal={mostrarModal} />
     </div>
     <ModalPokemon trigger={modalVisibility} setTrigger={setModalVisibility} id={nroPokemon}/>
   </>

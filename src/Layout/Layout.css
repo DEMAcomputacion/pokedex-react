@@ -13,3 +13,13 @@
 .panel-derecho {
   flex: 20%;
 }
+
+.pokeball {
+  position: absolute;
+  z-index: 0;
+  width: 30%;
+  opacity: .05;
+  top: -45px;
+  left: -45px;
+  rotate: -30deg;
+}

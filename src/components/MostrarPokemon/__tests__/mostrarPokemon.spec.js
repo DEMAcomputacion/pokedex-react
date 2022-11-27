@@ -41,7 +41,6 @@ describe('Prueba el estado Error', () => {
     test('Prueba que se renderize el componente Loading al pasar un estado loading', () => {
         useFetchPokemon.mockImplementation(() => { return stateError });
         render(<MostrarPokemon />)
-        screen.debug()
         expect(screen.getByText(/Algo salió mal/i)).toBeInTheDocument()
     })
 })

@@ -1,4 +1,4 @@
-import {screen, render} from '@testing-library/react'
+import {render} from '@testing-library/react'
 import Loading from '../Loading'
 
 test("Prueba que se renderize el componente", () =>{
